@@ -17,6 +17,5 @@ class Solution {
             temp=next;
         }
         return prev;
-
     }
 }
