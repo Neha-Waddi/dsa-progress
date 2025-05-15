@@ -1,5 +1,3 @@
-package arrays;
-
 class Solution {
     public int[] singleNumber(int[] nums) {
         int[] res=new int[2];
