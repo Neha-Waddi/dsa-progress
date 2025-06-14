@@ -1,4 +1,4 @@
-package arrays;
+
 
 public class Find_missing_num {
     public int missingNumber(int[] nums) {

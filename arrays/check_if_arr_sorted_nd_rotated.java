@@ -1,4 +1,4 @@
-package arrays;
+
 
 public class check_if_arr_sorted_nd_rotated {
     public boolean check(int[] nums) {
