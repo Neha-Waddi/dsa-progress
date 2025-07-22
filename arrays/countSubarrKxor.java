@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class countSubarrKxor {
     public long subarrayXor(int arr[], int k) {
         // code here

@@ -1,4 +1,3 @@
-package arrays;
 
 public class Max_Sum_subarray {
         public int maxSubArray(int[] nums) {

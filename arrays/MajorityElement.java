@@ -1,4 +1,3 @@
-package arrays;
 
 public class MajorityElement {
     public void sortColors(int[] nums) {
