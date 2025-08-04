@@ -1,43 +1,42 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class fourSum {
-    public List<List<Integer>> foursum(int[] nums, int target) {
-        List<List<Integer>> res=new ArrayList<>();
-        Arrays.sort(nums);
-        for(int i=0;i<nums.length;i++){
-            if(i>0 && nums[i]==nums[i-1]){
-                continue;
-            }
-            for(int j=i+1;j<nums.length;j++){
-                if(j>i+1&& nums[j]==nums[j-1]){
-                    continue;
-                }
+   public ArrayList<ArrayList<Integer>> foursum(int[] arr, int target) {
+        // code here
+        Arrays.sort(arr);
+        ArrayList<ArrayList<Integer>> res=new ArrayList<>();
+        
+        int n=arr.length;
+        
+        for(int i=0;i<n-3;i++){
+            if(i>0 && arr[i]==arr[i-1]) continue;
+            for(int j=i+1;j<n-2;j++){
+                if(j>i+1 && arr[j]==arr[j-1]) continue;
                 int k=j+1;
-                int l=nums.length-1;
+                int l=n-1;
+                
                 while(k<l){
-                    long sum=nums[i];
-                    sum+=nums[j];
-                    sum+=nums[k];
-                    sum+=nums[l];
-                    if(sum<target){
+                    int curr=arr[i]+arr[j]+arr[k]+arr[l];
+                    if(curr==target){
+                        ArrayList<Integer> temp=new ArrayList<>();
+                        temp.add(arr[i]);
+                        temp.add(arr[j]);
+                        temp.add(arr[k]);
+                        temp.add(arr[l]);
+                        
+                        res.add(temp);
+                        
                         k++;
-                    }
-                    else if(sum>target){
                         l--;
+                        while(k<l &&arr[k]==arr[k-1]) k++;
+                        while(k<l && arr[l]==arr[l+1]) l--;
+                    }
+                    else if(curr<target){
+                        k++;
                     }
                     else{
-
-                        res.add(Arrays.asList(nums[i],nums[j],nums[k],nums[l]));
-                        k++;
                         l--;
-                        while(k<l && nums[k]==nums[k-1]){
-                            k++;
-                        }
-                        while(k<l && nums[l]==nums[l+1]){
-                           l--;
-                        }
                     }
                 }
             }
