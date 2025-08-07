@@ -1,4 +1,3 @@
-package arrays;
 
 public class remove_duplicatesfrom_sorted {
     public int removeDuplicates(int[] nums) {

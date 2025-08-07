@@ -1,4 +1,3 @@
-package arrays;
 
 public class move_zeroes_toend {
     public void moveZeroes(int[] nums) {
