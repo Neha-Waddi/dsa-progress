@@ -1,7 +1,7 @@
-package graphs;
+package graphs.BFS_DFS;
 
 import java.util.*;
-class Solution {
+class no_of_provinces {
     public int findCircleNum(int[][] isConnected) {
         int n=isConnected.length;
         List<List<Integer>> adj=new ArrayList<>();

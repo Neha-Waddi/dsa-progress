@@ -1,9 +1,9 @@
-package graphs;
+package graphs.BFS_DFS;
 
 import java.util.*;
-class Solution {
+class dfs {
     // Function to return a list containing the DFS traversal of the graph.
-    public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
+    public ArrayList<Integer> Dfs(ArrayList<ArrayList<Integer>> adj) {
         // Code here
         ArrayList<Integer> res=new ArrayList<>();
         int n=adj.size();
