@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class boats2p {
     public int numRescueBoats(int[] people, int limit) {
         int i=0,j=people.length-1;
@@ -18,5 +19,5 @@ public class boats2p {
         }
 
         return boats;
-    }H
+    }
 }

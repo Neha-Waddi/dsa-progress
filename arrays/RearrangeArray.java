@@ -1,4 +1,3 @@
-package arrays;
 
 public class RearrangeArray {
     public int[] rearrangeArray(int[] nums) {
