@@ -24,3 +24,38 @@ public class longpalin {
         return right-left-1;
     }
 }
+
+//other approach same logic 
+
+class Solution {
+    static String longestPalindrome(String s) {
+        // code here
+        int max=0;
+        String res="";
+        for(int i=0;i<s.length();i++){
+            String p1=check(s,i,i);
+            String p2=check(s,i,i+1);
+            if(Math.max(p1.length(),p2.length())>max){
+                if(p1.length()>p2.length())
+                {
+                    res=p1;
+                    max=p1.length();
+                }
+                else{
+                    res=p2;
+                    max=p2.length();
+                }
+            }
+        }
+        return res;
+    }
+    static String check(String s,int i,int j){
+        
+        while(i>=0 && j<s.length() &&s.charAt(i)==s.charAt(j)){
+            i--;
+            j++;
+        }
+        
+        return s.substring(i+1,j);
+    }
+}
