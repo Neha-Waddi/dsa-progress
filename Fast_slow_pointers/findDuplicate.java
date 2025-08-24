@@ -1,7 +1,7 @@
 package Fast_slow_pointers;
 
 public class findDuplicate {
-     public int findDuplicate(int[] nums) {
+     public int finduplicate(int[] nums) {
         int slow=nums[0];
         int fast=nums[0];
 
