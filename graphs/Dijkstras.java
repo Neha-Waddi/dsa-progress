@@ -1,6 +1,8 @@
 package graphs;
 import java.util.*;
 
+import graphs.BFS_DFS.Pair;
+
 class Pair{
     int dist;
     int node;
